@@ -64,7 +64,7 @@
 
         /*profile section font styling*/
         .name-hero h1 {
-            font-family: Open Sans, sans-serif;
+            font-family: Calibri;
             font-size: 2em;
             text-align: center;
         }
@@ -107,7 +107,7 @@
             border: none;
             text-align: left;
             outline: none;
-            font-size: 15px;
+            font-size: 20px;
             transition: 0.4s;
         }
 
@@ -120,9 +120,8 @@
         .accordion:after {
             content: "\002B";
             color: #777;
-            font-weight: bold;
             float: right;
-            margin-left: 5px;
+            margin-left: 0px;
         }
 
         .active:after {
@@ -145,7 +144,7 @@
         /*toggle menu styling*/
         .inner {
             margin: 0 auto;
-            max-width: 975px;
+            max-width: au;
             padding: 0.5em 1em;
         }
 
@@ -242,7 +241,8 @@
             padding: 2px 4px;
         }
 
-        .social {
+        .social,
+        .download {
             margin-top: 50px;
             margin-bottom: 50px;
             text-align: center;
@@ -258,13 +258,19 @@
         }
 
         .fa-linkedin,
-        .fa-github {
+        .fa-github,
+        .fa-download {
             background-color: rgba(0, 0, 0, 0.024);
             color: #444;
         }
 
         .fa:hover {
             opacity: 0.7;
+        }
+
+        /*divider*/
+        hr.solid {
+            border-right: 1px solid rgba(0, 0, 0, 0.05);
         }
     </style>
 </head>
@@ -284,7 +290,7 @@
         </div>
         <div class="right">
             <div class="inner">
-                <button class="accordion">Erfarenhet</button>
+                <button class="accordion">Erfarenter</button>
                 <div class="panel">
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
                         labore
@@ -345,7 +351,7 @@
             </div>
             <div class="inner">
                 <div class="footer">
-                    <h3>Kontakt</h3>
+                    <h2>Kontakt</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
                         labore
                         et
@@ -353,6 +359,12 @@
                         aliquip
                         ex
                         ea commodo consequat.</p>
+
+                    <div class="download">
+                        <p>Download My Resume</p>
+                        <a href="/img/dummy-profile-pic-1.jpg" download class="fa fa-download"></a>
+                    </div>
+                    <hr class="solid">
                     <div class="social">
                         <a href="https://github.com/mahmutalban" class="fa fa-github" target="_blank"></a>
                         <a href="https://www.linkedin.com/in/mahmutalban/" class="fa fa-linkedin" target="_blank"></a>
