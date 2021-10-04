@@ -14,18 +14,16 @@
             box-sizing: border-box;
         }
 
-        html,
-        body {
-            font-family: 'ubuntu';
-            src: url(/Ubuntu/Ubuntu-Regular.ttf);
-            font-weight: 300;
+        * {
+            font-family: 'ubuntu', Arial, sans-serif;
+            font-weight: normal;
+            font-style: normal;
         }
 
-       @font-face {
-           font-family: 'ubuntu';
-           src: url(/Ubuntu/Ubuntu-Regular.ttf);
-           font-weight: 300;
-       }
+        @font-face {
+            font-family: "Ubuntu";
+            src: url("/file/webfontkit-20211003-231707/ubuntu-regular-webfont.woff") format("woff")
+        }
 
         /*wrapper whole classes*/
         .wrapper {
@@ -71,7 +69,8 @@
 
         /*profile section font styling*/
         .name-hero h1 {
-            font-family: Calibri;
+            font-family: 'ubuntu';
+            src: url(/Ubuntu/Ubuntu-Regular.ttf);
             font-size: 2em;
             text-align: center;
         }
@@ -260,6 +259,7 @@
             text-align: center;
             margin-bottom: 50px;
         }
+
         .download {
             margin-top: 80px;
             text-align: center;
@@ -499,7 +499,8 @@
                 <hr class="solid">
                 <div class="social">
                     <a href="https://github.com/mahmutalban" class="fa fa-github" target="_blank"></a>
-                    <a href="https://www.linkedin.com/in/mahmutalban/?locale=sv_SE" class="fa fa-linkedin" target="_blank"></a>
+                    <a href="https://www.linkedin.com/in/mahmutalban/?locale=sv_SE" class="fa fa-linkedin"
+                        target="_blank"></a>
                 </div>
             </div>
         </div>
