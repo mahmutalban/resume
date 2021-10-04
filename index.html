@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <title>Resume</title>
@@ -17,7 +17,6 @@
         * {
             font-family: calibri;
             font-style: normal;
-            font-weight: 400;
         }
 
         /*wrapper whole classes*/
@@ -34,7 +33,7 @@
             margin-left: -1px;
             min-width: 256px;
             position: fixed;
-            width: 25%;
+            width: 33.3%;
         }
 
         /*profile section styling*/
@@ -70,7 +69,7 @@
         }
 
         .name-hero h1 em {
-            color: rgba(0, 0, 0, 0.3);
+            color: rgba(0, 0, 0, 0.5);
             font-style: normal;
             font-weight: 700;
         }
@@ -92,8 +91,8 @@
         .right {
             float: right;
             height: 100%;
-            position: relative;
-            width: 75%;
+            position: none;
+            width: 66.6%;
             margin-top: 2.5em;
         }
 
@@ -138,13 +137,45 @@
         }
 
         h1 {
-            color: rgba(0, 0, 0, 0.75);
+            color: rgba(0, 0, 0, 0.5);
+        }
+
+        #summary {
+            margin-bottom: 50px;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+            gap: 0px 0px;
+            grid-auto-flow: row;
+            grid-template-areas:
+                ".";
+        }
+
+        .position {
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: 20% 80%;
+            grid-auto-flow: row;
+            color: rgba(0, 0, 0, 0.5);
+
+        }
+
+        #pos-t1,
+        #pos-t2,
+        #pos-t3,
+        #pos-t4,
+        #pos-t5,
+        #pos-t6 {
+            margin-top: -20px;
         }
 
         /*toggle menu styling*/
         .inner {
             margin: 0 auto;
-            max-width: au;
+            max-width: auto;
             padding: 0.5em 1em;
         }
 
@@ -153,7 +184,7 @@
         }
 
         .inner p {
-            color: rgba(0, 0, 0, 0.3);
+            color: rgba(0, 0, 0, 0.5);
         }
 
         .inner p em {
@@ -216,10 +247,15 @@
             padding: 2px 4px;
         }
 
-        .social,
-        .download {
-            margin: 25px;
+        .social {
+            margin-top: 30px;
             text-align: center;
+            margin-bottom: 50px;
+        }
+        .download {
+            margin-top: 80px;
+            text-align: center;
+            margin-bottom: 50px;
         }
 
         .fa {
@@ -264,93 +300,201 @@
             </div>
         </div>
         <div class="right">
+            <div class="inner" id="summary">
+                <h2>Summary</h2>
+                <p>Jag är en driven person med ett brinnande intresse för IT och problemlösning. Mina ambitioner är höga
+                    och jag trivs i en roll med mycket ansvar, snabb inlärning och utvecklingsmöjligheter i en vardag
+                    med utmanande uppgifter.</p>
+            </div>
             <div class="inner">
-                <button class="accordion">Erfarenter</button>
+                <button class="accordion">Erfarenhet</button>
                 <div class="panel">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                        labore
-                        et
-                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                        aliquip
-                        ex
-                        ea commodo consequat.</p>
+                    <div class="container">
+                        <div class="position">
+                            <div class="pos">
+                                <h4>Nov 2020 - Nu </h4>
+                                <h4 id="pos-t1">Cabonline Group AB, Stockholm</h4>
+                                <p><strong>Trafikledare: </strong><br>Vi når ut till tusentals människor dagligen
+                                    och mina uppgifter är att planera de dagliga rutterna för våra taxibilar och se till
+                                    att den dagliga driften fungerar som den ska.</p>
+                            </div>
+                        </div>
+                        <div class="position">
+                            <div class="pos">
+                                <h4>Jun 2019 - Dec 2019 </h4>
+                                <h4 id="pos-t2">Verisure Sverige AB, Stockholm</h4>
+                                <p><strong>Jr. Systemutvecklare: </strong><br>Jag designade, utvecklade och
+                                    implementerade funktioner baserat på specifikationer. Som teknik har jag använt
+                                    JavaScript jQuery, Less, Atom som editör, GIT och SourceTree som VCS och JIRA för
+                                    projekt- och ärandehanteringsystem.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="position">
+                            <div class="pos">
+                                <h4>Feb 2018 - Aug 2018 </h4>
+                                <h4 id="pos-t3">Racoon Development AB, Bangkok</h4>
+                                <p><strong>Jr. Systemutvecklare: </strong><br>Mina uppgifter var hjälpa att designa och
+                                    utveckla vår Wordpress hostade sajt och vår webbapplikation. Detta var ett kort
+                                    uppdrag som inkluderade min LIA period.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="position">
+                            <div class="pos">
+                                <h4>Okt 2017 - Feb 2018 </h4>
+                                <h4 id="pos-t4">Jensen Yrkeshögskola, Stockholm</h4>
+                                <p><strong>IT Support: </strong><br>Jensen använder sitt eget system som heter ”Campus”
+                                    så supporten gällde mest om detta. Det var en deltidstjänst, under min utbildning
+                                    hos Jensen jag fick utveckla min kommunikation och servicekunskaper.
+
+                                </p>
+                            </div>
+                        </div>
+                        <div class="position">
+                            <div class="pos">
+                                <h4>Nov 2014 - Aug 2015</h4>
+                                <h4 id="pos-t6">Spendrups Bryggeri AB, Stockholm</h4>
+                                <p><strong>Lagermedarbetare: </strong><br>Som lagerarbetare, mina huvudsakliga
+                                    arbetsuppgifter handlade om att plocka, packa och färdigställa olika varor till
+                                    kunder enligt en orderlista.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="inner">
                 <button class="accordion">Utbildning</button>
                 <div class="panel">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                        labore
-                        et
-                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                        aliquip
-                        ex
-                        ea commodo consequat.</p>
-                </div>
-            </div>
-            <div class="inner">
-                <button class="accordion">Section 3</button>
-                <div class="panel">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                        labore
-                        et
-                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                        aliquip
-                        ex
-                        ea commodo consequat.</p>
-                </div>
-            </div>
-            <div class="inner">
-                <button class="accordion">Section 3</button>
-                <div class="panel">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                        labore
-                        et
-                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                        aliquip
-                        ex
-                        ea commodo consequat.</p>
-                </div>
-            </div>
-            <div class="inner">
-                <button class="accordion">Section 3</button>
-                <div class="panel">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                        labore
-                        et
-                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                        aliquip
-                        ex
-                        ea commodo consequat.</p>
-                </div>
-            </div>
-            
-            <div class="inner">
-                <div class="footer">
-                    <h2>Kontakt</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                        labore
-                        et
-                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                        aliquip
-                        ex
-                        ea commodo consequat.</p>
-            
-
-                    <div class="download">
-                        <p>Download My Resume</p>
-                        <a href="/img/dummy-profile-pic-1.jpg" download class="fa fa-download"></a>
+                    <div class="container">
+                        <div class="position">
+                            <div class="pos">
+                                <h4>Aug 2020 - Feb 2022 </h4>
+                                <h4 id="pos-t1">EC Utbildning, Göteborg</h4>
+                                <p>Jag under utbildningen bland annat får utföra tester, buggsökning och
+                                    felsökning, förstå kravspecifikationer och arbeta med buggrapportering. Jag får även
+                                    öva på olika testning, med tyngdpunkt på agila processer och livscykler (SCRUM, XP,
+                                    Lean).
+                                </p>
+                                <ul>
+                                    <li>Introduktion till test</li>
+                                    <li>Programmering för testare - Java OOP</li>
+                                    <li>Test Automation</li>
+                                    <li>Testa automatisering med CI/CD</li>
+                                    <li>Testdesign, tekniker och exevering av tester</li>
+                                    <li>Kommunikation för testare</li>
+                                    <li>Bugrapportering</li>
+                                    <li>Icke-funktionella tester</li>
+                                    <li>Projektkontexter</li>
+                                    <li>Testmetoder</li>
+                                    <li>Teststrategier</li>
+                                    <li>Tänk som en testare</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="position">
+                            <div class="pos">
+                                <h4>Sep 2016 - Dec 2018 </h4>
+                                <h4 id="pos-t2">Jensen Yrkeshögskola, Stockholm</h4>
+                                <ul>
+                                    <li>Matematik</li>
+                                    <li>Logisk design </li>
+                                    <li>Datorarkitektur</li>
+                                    <li>JAVA och J2EE</li>
+                                    <li>Objektorienterad programmering med Java </li>
+                                    <li>Objektorienterad modellering och design</li>
+                                    <li>Datastrukturer med Java</li>
+                                    <li>Design och analys av algoritmer</li>
+                                    <li>UNIX och Shell -programmering</li>
+                                    <li>Datororganisation</li>
+                                    <li>Operativsystem</li>
+                                    <li>Databashantering</li>
+                                    <li>Programmering av webben</li>
+                                    <li>Avancerat DBMS</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="position">
+                            <div class="pos">
+                                <h4>Sep 2012 - Dec 2014 </h4>
+                                <h4 id="pos-t3">Västerbergslagens Utbildningsförbund, Ludvika</h4>
+                                <p><strong>Svenska och Engelska: </strong><br>TISUS är en officiell examen på kunskaper
+                                    i svenska språket som krävs för studenter som söker sig till svenska universitet.
+                                    Testet består av tre komponenter: läsning, skrivning och tal.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="position">
+                            <div class="pos">
+                                <h4>Sep 2002 - Feb 2006 </h4>
+                                <h4 id="pos-t4">Karatas Gymnasium, Izmir - Turkiet</h4>
+                                <p><strong>Gymnasiet: </strong><br>Vanligt gymnasiet: Svenska/svenska som andraspråk,
+                                    Engelska, Matematik, Idrott & hälsa, Historia, Samhällskunskap, Religionskunskap
+                                    Naturkunskap.
+                                </p>
+                            </div>
+                        </div>
                     </div>
-                    <hr class="solid">
-                    <div class="social">
-                        <a href="https://github.com/mahmutalban" class="fa fa-github" target="_blank"></a>
-                        <a href="https://www.linkedin.com/in/mahmutalban/" class="fa fa-linkedin" target="_blank"></a>
-                    </div>
+                </div>
+            </div>
+            <div class="inner">
+                <button class="accordion">Kompetenser</button>
+                <div class="panel">
+                    <div class="container">
+                        <div class="position">
+                            <div class="pos">
+                                <h4>Mjuka Kompetenser</h4>
+                                <ul>
+                                    <li>Bra Kommunikatör</li>
+                                    <li>Driven</li>
+                                    <li>Problemlösare</li>
+                                    <li>Stresstålig</li>
+                                    <li>Noggrann</li>
+                                    <li>Lagspelare</li>
+                                    <li>Strukturerad</li>
+                                </ul>
+                                <h4>Tekniska Kompetenser</h4>
+                                <ul>
+                                    <li>Mjukvatutestning</li>
+                                    <li>TDD</li>
+                                    <li>BDD</li>
+                                    <li>Test Automation</li>
+                                    <li>Java</li>
+                                    <li>SDLC</li>
+                                    <li>Selenium</li>
+                                    <li>Cucumber</li>
+                                    <li>Gherkin</li>
+                                    <li>Gradle</li>
+                                    <li>White & Black Box Testning</li>
+                                    <li>CI/CD</li>
+                                    <li>Test Cases</li>
+                                    <li>Bug Reports</li>
+                                    <li>Agile Metodologi</li>
+                                    <li>Eclipse, Intelli J och VS Code</li>
+                                    <li>SQL, MySQL</li>
+                                    <li>GIT, GitHub</li>
+                                    <li>Windows, Linux</li>
+                                    <li>Word, Excel and PPT</li>
+                                </ul>
+                            </div>
+                        </div>
 
+                    </div>
+                </div>
+            </div>
+            <div class="inner">
+                <div class="download">
+                    <p>Download My Resume</p>
+                    <a href="/file/Mahmut Alban Resume.pdf" download class="fa fa-download"></a>
+                </div>
+                <hr class="solid">
+                <div class="social">
+                    <a href="https://github.com/mahmutalban" class="fa fa-github" target="_blank"></a>
+                    <a href="https://www.linkedin.com/in/mahmutalban/?locale=sv_SE" class="fa fa-linkedin" target="_blank"></a>
                 </div>
             </div>
         </div>
-    </div>
     </div>
     <script>
         var acc = document.getElementsByClassName("accordion");
