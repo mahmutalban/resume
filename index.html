@@ -50,16 +50,14 @@
         }
 
         /*profile section image styling*/
-        .me-img {
-            background: url(https://ibb.co/Pg52qbs) no-repeat center center;
-            background-size: 100%;
-            background-position: 0px;
+        .me-img img {
             border-radius: 10%;
             height: 150px;
             margin: 0 auto;
             position: relative;
             max-width: 150px;
         }
+  
 
         /*profile section font styling*/
         .name-hero h1 {
@@ -257,6 +255,7 @@
             margin-top: 80px;
             text-align: center;
             margin-bottom: 50px;
+            visibility: hidden;
         }
 
         .fa {
@@ -291,7 +290,9 @@
     <div class="wrapper-clearfix">
         <div class="left">
             <div class="name-hero">
-                <div class="me-img"></div>
+                <div class="me-img" style="text-align: center;">
+                    <img src="/file/profile.jpeg" alt="profile">
+                </div>
                 <div class="name-text">
                     <h1>Mahmut <em>Alban</em></h1>
                     <p>Järfälla, 177 38</p>
