@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 
 <head>
     <title>Resume</title>
@@ -15,9 +15,8 @@
         box-sizing: border-box;
     }
 
-    * {
+    body {
         font-family: Calibri;
-        font-weight: 400;
     }
 
     /*wrapper whole classes*/
@@ -64,7 +63,6 @@
 
     /*profile section font styling*/
     .name-hero h1 {
-        font-family: Calibri;
         font-size: 2em;
         text-align: center;
     }
@@ -95,46 +93,7 @@
         position: none;
         width: 66.6%;
         margin-top: 2.5em;
-    }
-
-    /*toggle menu styling*/
-    .accordion {
-        background-color: rgba(0, 0, 0, 0.024);
-        color: #444;
-        cursor: pointer;
-        padding: 18px;
-        width: 100%;
-        border: none;
-        text-align: left;
-        outline: none;
-        font-size: 20px;
-        transition: 0.4s;
-    }
-
-    .active,
-    .accordion:hover {
-        background-color: #ccc;
-    }
-
-    /*toggle menu plus and minus icon*/
-    .accordion:after {
-        content: "\002B";
-        color: #777;
-        float: right;
-        margin-left: 0px;
-    }
-
-    .active:after {
-        content: "\2212";
-    }
-
-    /*toggle menu opens*/
-    .panel {
-        padding: 0 30px;
-        background-color: white;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease-out;
+        padding: 2.5%;
     }
 
     h1 {
@@ -145,14 +104,78 @@
         margin-bottom: 50px;
     }
 
+    p i {
+        font-family: Calibri;
+    }
+
+    /* Style the tab */
+    .tab {
+        overflow: hidden;
+        border: 2px solid #ccc;
+        background-color: #f1f1f1;
+        text-align: center;
+    }
+
+    /* Style the buttons inside the tab */
+    .tab button {
+        background-color: inherit;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        transition: 0.3s;
+        padding: 5px 7px;
+        font-size: 15px;
+        font-family: Calibri;
+        font-weight: 600;
+    }
+
+    /* Change background color of buttons on hover */
+    .tab button:hover {
+        background-color: #ddd;
+    }
+
+    /* Create an active/current tablink class */
+    .tab button.active {
+        background-color: #ccc;
+    }
+
+    /* Style the tab content */
+    .tabcontent {
+        display: none;
+        padding: 6px 12px;
+        -webkit-animation: fadeEffect 1s;
+        animation: fadeEffect 1s;
+    }
+
+    /* Fade in tabs */
+    @-webkit-keyframes fadeEffect {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes fadeEffect {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    /*right page tabs active*/
     .container {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
         gap: 0px 0px;
         grid-auto-flow: row;
-        grid-template-areas:
-            ".";
+        grid-template-areas: ".";
     }
 
     .position {
@@ -161,7 +184,6 @@
         grid-template-rows: 20% 80%;
         grid-auto-flow: row;
         color: rgba(0, 0, 0, 0.5);
-
     }
 
     #pos-t1,
@@ -173,13 +195,7 @@
         margin-top: -20px;
     }
 
-    /*toggle menu styling*/
-    .inner {
-        margin: 0 auto;
-        max-width: auto;
-        padding: 0.5em 1em;
-    }
-
+    /*right pane font styling*/
     .inner h1 {
         font-size: 1.75em;
     }
@@ -191,10 +207,6 @@
     .inner p em {
         color: rgba(0, 0, 0, 0.75);
         font-style: normal;
-    }
-
-    .inner section {
-        margin: 100px auto;
     }
 
     /*contact and social links styling*/
@@ -308,192 +320,229 @@
                     och jag trivs i en roll med mycket ansvar, snabb inlärning och utvecklingsmöjligheter i en vardag
                     med utmanande uppgifter.</p>
             </div>
-            <div class="inner">
-                <button class="accordion">Erfarenhet</button>
-                <div class="panel">
-                    <div class="container">
-                        <div class="position">
-                            <div class="pos">
-                                <h4>Nov 2020 - Nu </h4>
-                                <h4 id="pos-t1">Cabonline Group AB, Stockholm</h4>
-                                <p><strong>Trafikledare: </strong><br>Vi når ut till tusentals människor dagligen
-                                    och mina uppgifter är att planera de dagliga rutterna för våra taxibilar och se till
-                                    att den dagliga driften fungerar som den ska.</p>
-                            </div>
+            <div class="tab"> <button class="tablinks" onclick="openTabs(event, 'Erfarenhet')">Erfarenhet</button>
+                <button class="tablinks" onclick="openTabs(event, 'Utbildning')">Utbildning</button> <button
+                    class="tablinks" onclick="openTabs(event, 'Kompetens')">Kompetens</button> <button class="tablinks"
+                    onclick="openTabs(event, 'Referenser')">Referenser</button>
+            </div>
+            <div id="Erfarenhet" class="tabcontent">
+                <div class="container">
+                    <div class="position">
+                        <div class="pos">
+                            <h4>Nov 2020 - Nu </h4>
+                            <h4 id="pos-t1">Cabonline Group AB, Stockholm</h4>
+                            <p><strong>Trafikledare: </strong><br>Vi når ut till tusentals människor dagligen och mina
+                                uppgifter är att planera de dagliga rutterna för våra taxibilar och se till att den
+                                dagliga driften fungerar som den ska.</p>
                         </div>
-                        <div class="position">
-                            <div class="pos">
-                                <h4>Jun 2019 - Dec 2019 </h4>
-                                <h4 id="pos-t2">Verisure Sverige AB, Stockholm</h4>
-                                <p><strong>Jr. Frontend Utvecklare: </strong><br>Jag designade, utvecklade och
-                                    implementerade funktioner baserat på specifikationer. Som teknik har jag använt
-                                    JavaScript jQuery, Less, Atom som editör, GIT och SourceTree som VCS och JIRA för
-                                    projekt- och ärandehanteringsystem.
-                                </p>
-                            </div>
+                    </div>
+                    <div class="position">
+                        <div class="pos">
+                            <h4>Jun 2019 - Dec 2019 </h4>
+                            <h4 id="pos-t2">Verisure Securitas Direct AB AB, Stockholm</h4>
+                            <p><strong>Jr. Frontend Utvecklare: </strong><br>Jag designade, utvecklade och
+                                implementerade funktioner baserat på specifikationer. Som teknik har jag använt
+                                JavaScript jQuery, Less, Atom som editör, GIT och SourceTree som VCS och JIRA för
+                                projekt- och ärandehanteringsystem. </p>
                         </div>
-                        <div class="position">
-                            <div class="pos">
-                                <h4>Feb 2018 - Aug 2018 </h4>
-                                <h4 id="pos-t3">Racoon Development AB, Bangkok</h4>
-                                <p><strong>Jr. Systemutvecklare: </strong><br>Mina uppgifter var hjälpa att designa och
-                                    utveckla vår Wordpress hostade sajt och vår webbapplikation. Detta var ett kort
-                                    uppdrag som inkluderade min LIA period.
-                                </p>
-                            </div>
+                    </div>
+                    <div class="position">
+                        <div class="pos">
+                            <h4>Feb 2018 - Aug 2018 </h4>
+                            <h4 id="pos-t3">Racoon Development AB, Bangkok</h4>
+                            <p><strong>Jr. Systemutvecklare: </strong><br>Mina uppgifter var hjälpa att designa och
+                                utveckla vår Wordpress hostade sajt och vår webbapplikation. Detta var ett kort uppdrag
+                                som inkluderade min LIA period. </p>
                         </div>
-                        <div class="position">
-                            <div class="pos">
-                                <h4>Okt 2017 - Feb 2018 </h4>
-                                <h4 id="pos-t4">Jensen Yrkeshögskola, Stockholm</h4>
-                                <p><strong>IT Support: </strong><br>Jensen använder sitt eget system som heter ”Campus”
-                                    så supporten gällde mest om detta. Det var en deltidstjänst, under min utbildning
-                                    hos Jensen jag fick utveckla min kommunikation och servicekunskaper.
-
-                                </p>
-                            </div>
+                    </div>
+                    <div class="position">
+                        <div class="pos">
+                            <h4>Okt 2017 - Feb 2018 </h4>
+                            <h4 id="pos-t4">Jensen Yrkeshögskola, Stockholm</h4>
+                            <p><strong>IT Support: </strong><br>Jensen använder sitt eget system som heter ”Campus” så
+                                supporten gällde mest om detta. Det var en deltidstjänst, under min utbildning hos
+                                Jensen jag fick utveckla min kommunikation och servicekunskaper. </p>
                         </div>
-                        <div class="position">
-                            <div class="pos">
-                                <h4>Nov 2014 - Aug 2015</h4>
-                                <h4 id="pos-t6">Spendrups Bryggeri AB, Stockholm</h4>
-                                <p><strong>Lagermedarbetare: </strong><br>Som lagerarbetare, mina huvudsakliga
-                                    arbetsuppgifter handlade om att plocka, packa och färdigställa olika varor till
-                                    kunder enligt en orderlista.
-                                </p>
-                            </div>
+                    </div>
+                    <div class="position">
+                        <div class="pos">
+                            <h4>Nov 2014 - Aug 2015</h4>
+                            <h4 id="pos-t6">Spendrups Bryggeri AB, Stockholm</h4>
+                            <p><strong>Lagermedarbetare: </strong><br>Som lagerarbetare, mina huvudsakliga
+                                arbetsuppgifter handlade om att plocka, packa och färdigställa olika varor till kunder
+                                enligt en orderlista. </p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="inner">
-                <button class="accordion">Utbildning</button>
-                <div class="panel">
-                    <div class="container">
-                        <div class="position">
-                            <div class="pos">
-                                <h4>Aug 2020 - Feb 2022 </h4>
-                                <h4 id="pos-t1">EC Utbildning, Göteborg</h4>
-                                <p>Jag under utbildningen bland annat får utföra tester, buggsökning och
-                                    felsökning, förstå kravspecifikationer och arbeta med buggrapportering. Jag får även
-                                    öva på olika testning, med tyngdpunkt på agila processer och livscykler (SCRUM, XP,
-                                    Lean).
-                                </p>
-                                <ul>
-                                    <li>Introduktion till test</li>
-                                    <li>Programmering för testare - Java OOP</li>
-                                    <li>Test Automation</li>
-                                    <li>Testa automatisering med CI/CD</li>
-                                    <li>Testdesign, tekniker och exevering av tester</li>
-                                    <li>Kommunikation för testare</li>
-                                    <li>Bugrapportering</li>
-                                    <li>Icke-funktionella tester</li>
-                                    <li>Projektkontexter</li>
-                                    <li>Testmetoder</li>
-                                    <li>Teststrategier</li>
-                                    <li>Tänk som en testare</li>
-                                </ul>
-                            </div>
+            <div id="Utbildning" class="tabcontent">
+                <div class="container">
+                    <div class="position">
+                        <div class="pos">
+                            <h4>Aug 2020 - Feb 2022 </h4>
+                            <h4 id="pos-t1">EC Utbildning, Göteborg</h4>
+                            <p>Jag under utbildningen bland annat får utföra tester, buggsökning och felsökning, förstå
+                                kravspecifikationer och arbeta med buggrapportering. Jag får även öva på olika testning,
+                                med tyngdpunkt på agila processer och livscykler (SCRUM, XP, Lean). </p>
+                            <ul>
+                                <li>Introduktion till test</li>
+                                <li>Programmering för testare - Java OOP</li>
+                                <li>Test Automation</li>
+                                <li>Testa automatisering med CI/CD</li>
+                                <li>Testdesign, tekniker och exevering av tester</li>
+                                <li>Kommunikation för testare</li>
+                                <li>Bugrapportering</li>
+                                <li>Icke-funktionella tester</li>
+                                <li>Projektkontexter</li>
+                                <li>Testmetoder</li>
+                                <li>Teststrategier</li>
+                                <li>Tänk som en testare</li>
+                            </ul>
                         </div>
-                        <div class="position">
-                            <div class="pos">
-                                <h4>Sep 2016 - Dec 2018 </h4>
-                                <h4 id="pos-t2">Jensen Yrkeshögskola, Stockholm</h4>
-                                <ul>
-                                    <li>Matematik</li>
-                                    <li>Logisk design </li>
-                                    <li>Datorarkitektur</li>
-                                    <li>JAVA och J2EE</li>
-                                    <li>Objektorienterad programmering med Java </li>
-                                    <li>Objektorienterad modellering och design</li>
-                                    <li>Datastrukturer med Java</li>
-                                    <li>Design och analys av algoritmer</li>
-                                    <li>UNIX och Shell -programmering</li>
-                                    <li>Datororganisation</li>
-                                    <li>Operativsystem</li>
-                                    <li>Databashantering</li>
-                                    <li>Programmering av webben</li>
-                                    <li>Avancerat DBMS</li>
-                                </ul>
-                            </div>
+                    </div>
+                    <div class="position">
+                        <div class="pos">
+                            <h4>Sep 2016 - Dec 2018 </h4>
+                            <h4 id="pos-t2">Jensen Yrkeshögskola, Stockholm</h4>
+                            <ul>
+                                <li>Matematik</li>
+                                <li>Logisk design </li>
+                                <li>Datorarkitektur</li>
+                                <li>JAVA och J2EE</li>
+                                <li>Objektorienterad programmering med Java </li>
+                                <li>Objektorienterad modellering och design</li>
+                                <li>Datastrukturer med Java</li>
+                                <li>Design och analys av algoritmer</li>
+                                <li>UNIX och Shell -programmering</li>
+                                <li>Datororganisation</li>
+                                <li>Operativsystem</li>
+                                <li>Databashantering</li>
+                                <li>Programmering av webben</li>
+                                <li>Avancerat DBMS</li>
+                            </ul>
                         </div>
-                        <div class="position">
-                            <div class="pos">
-                                <h4>Sep 2012 - Dec 2014 </h4>
-                                <h4 id="pos-t3">Västerbergslagens Utbildningsförbund, Ludvika</h4>
-                                <p><strong>Svenska och Engelska: </strong><br>TISUS är en officiell examen på kunskaper
-                                    i svenska språket som krävs för studenter som söker sig till svenska universitet.
-                                    Testet består av tre komponenter: läsning, skrivning och tal.
-                                </p>
-                            </div>
+                    </div>
+                    <div class="position">
+                        <div class="pos">
+                            <h4>Sep 2012 - Dec 2014 </h4>
+                            <h4 id="pos-t3">Västerbergslagens Utbildningsförbund, Ludvika</h4>
+                            <p><strong>Svenska och Engelska: </strong><br>TISUS är en officiell examen på kunskaper i
+                                svenska språket som krävs för studenter som söker sig till svenska universitet. Testet
+                                består av tre komponenter: läsning, skrivning och tal. </p>
                         </div>
-                        <div class="position">
-                            <div class="pos">
-                                <h4>Sep 2002 - Feb 2006 </h4>
-                                <h4 id="pos-t4">Karatas Gymnasium, Izmir - Turkiet</h4>
-                                <p><strong>Gymnasiet: </strong><br>Vanligt gymnasiet: Svenska/svenska som andraspråk,
-                                    Engelska, Matematik, Idrott & hälsa, Historia, Samhällskunskap, Religionskunskap
-                                    Naturkunskap.
-                                </p>
-                            </div>
+                    </div>
+                    <div class="position">
+                        <div class="pos">
+                            <h4>Sep 2002 - Feb 2006 </h4>
+                            <h4 id="pos-t4">Karatas Gymnasium, Izmir - Turkiet</h4>
+                            <p><strong>Gymnasiet: </strong><br>Vanligt gymnasiet: Svenska/svenska som andraspråk,
+                                Engelska, Matematik, Idrott & hälsa, Historia, Samhällskunskap, Religionskunskap
+                                Naturkunskap. </p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="inner">
-                <button class="accordion">Kompetenser</button>
-                <div class="panel">
-                    <div class="container">
-                        <div class="position">
-                            <div class="pos">
-                                <h4>Mjuka Kompetenser</h4>
-                                <ul>
-                                    <li>Bra Kommunikatör</li>
-                                    <li>Driven</li>
-                                    <li>Problemlösare</li>
-                                    <li>Stresstålig</li>
-                                    <li>Noggrann</li>
-                                    <li>Lagspelare</li>
-                                    <li>Strukturerad</li>
-                                </ul>
-                                <h4>Tekniska Kompetenser</h4>
-                                <ul>
-                                    <li>Mjukvatutestning</li>
-                                    <li>TDD</li>
-                                    <li>BDD</li>
-                                    <li>Test Automation</li>
-                                    <li>Java</li>
-                                    <li>SDLC</li>
-                                    <li>Selenium</li>
-                                    <li>Cucumber</li>
-                                    <li>Gherkin</li>
-                                    <li>Gradle</li>
-                                    <li>White & Black Box Testning</li>
-                                    <li>CI/CD</li>
-                                    <li>Test Cases</li>
-                                    <li>Bug Reports</li>
-                                    <li>Agile Metodologi</li>
-                                    <li>Eclipse, Intelli J och VS Code</li>
-                                    <li>SQL, MySQL</li>
-                                    <li>GIT, GitHub</li>
-                                    <li>Windows, Linux</li>
-                                    <li>Word, Excel and PPT</li>
-                                </ul>
-                            </div>
+            <div id="Referenser" class="tabcontent">
+                <div class="container">
+                    <div class="position">
+                        <div class="pos">
+                            <h4>Alexander Abreu </h4>
+                            <h4 id="pos-t1">Verisure Securitas Direct AB, Stockholm</h4>
+                            <p><strong>Web Analyst: </strong><br>I had the opportunity to work with Mahmut Alban on
+                                different projects such as Site Speed improvement, where he contributed with strategies
+                                that made pages load faster. He has a fantastic eye for web design in CSS/HTML and
+                                technology regarding web. He played a significant role with his innovative design.
+                                Mahmut Alban is an excellent team player who can also work independently and do a great
+                                job.</p>
+                            <p><i><strong>LinkedIn:</strong> "October 5, 2021, Mahmut worked with Alexander in the same
+                                    group."</i></p>
                         </div>
-
+                    </div>
+                    <div class="position">
+                        <div class="pos">
+                            <h4>Jonny Ishak </h4>
+                            <h4 id="pos-t1">Cabonline Group AB, Stockholm</h4>
+                            <p><strong>Produktionleadre/Coach: </strong><br>Alban är mannen som har en teknisk lösning
+                                till allt och tänker utanför boxen för att underlätta arbetet för alla. Alltid positiv
+                                och sprider en positiv vibe som smittar av sig. Ett måste att ha i varje team.</p>
+                            <p><i><strong>LinkedIn:</strong> "October 4, 2021, Jonny managed Mahmut directly."</i></p>
+                        </div>
+                    </div>
+                    <div class="position">
+                        <div class="pos">
+                            <h4>Reuben Vas </h4>
+                            <h4 id="pos-t1">Verisure Securitas Direct AB, Stockholm</h4>
+                            <p><strong>Software Developer: </strong><br>I had the pleasure of working with Alban at
+                                Verisure, collaborating on several projects. He is truly an exceptional colleague with
+                                admirable teamwork skills and a great commitment. Alban consistently demonstrated a
+                                solid work ethic. He is highly adaptable, encouraging and supportive. I enjoyed working
+                                with Alban, wish him the best and would love to work with him again someday.</i></p>
+                            <p><i><strong>LinkedIn:</strong> "February 13, 2020, Mahmut worked with Reuben in the same
+                                    group."</i></p>
+                        </div>
+                    </div>
+                    <div class="position">
+                        <div class="pos">
+                            <h4>Neda Angela Hammarström </h4>
+                            <h4 id="pos-t1">Jensen Education AB, Stockholm</h4>
+                            <p><strong>Administrator: </strong><br>Mahmut is a very ambitious and driven person who gets
+                                the job done with positive energy! I highly recommend him for any job in the
+                                future!!</i></p>
+                            <p><i><strong>LinkedIn:</strong> "October 17, 2018, Neda Angela was Mahmut’s mentor."</i>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="Kompetens" class="tabcontent">
+                <div class="container">
+                    <div class="position">
+                        <div class="pos">
+                            <h4>Mjuka Kompetenser</h4>
+                            <ul>
+                                <li>Bra Kommunikatör</li>
+                                <li>Driven</li>
+                                <li>Problemlösare</li>
+                                <li>Stresstålig</li>
+                                <li>Noggrann</li>
+                                <li>Lagspelare</li>
+                                <li>Strukturerad</li>
+                            </ul>
+                            <h4>Tekniska Kompetenser</h4>
+                            <ul>
+                                <li>Mjukvatutestning</li>
+                                <li>TDD</li>
+                                <li>BDD</li>
+                                <li>Test Automation</li>
+                                <li>Java</li>
+                                <li>SDLC</li>
+                                <li>Selenium</li>
+                                <li>Apache JMeter</li>
+                                <li>Cucumber</li>
+                                <li>Gherkin</li>
+                                <li>Gradle</li>
+                                <li>White & Black Box Testning</li>
+                                <li>CI/CD</li>
+                                <li>Test Cases</li>
+                                <li>Bug Reports</li>
+                                <li>Agile Metodologi</li>
+                                <li>Eclipse, Intelli J och VS Code</li>
+                                <li>SQL, MySQL</li>
+                                <li>GIT, GitHub</li>
+                                <li>Windows, Linux</li>
+                                <li>Word, Excel and PPT</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="inner">
                 <div class="download">
-                    <p>Ladda ner mitt CV</p>
-                    <a href="https://github.com/mahmutalban/resume/raw/master/file/Resume.pdf" download
-                        class="fa fa-download"></a>
+                    <p>Ladda ner mitt CV</p> <a href="https://github.com/mahmutalban/resume/raw/master/file/Resume.pdf"
+                        download class="fa fa-download"></a>
                 </div>
                 <hr class="solid">
-                <div class="social">
-                    <a href="https://github.com/mahmutalban" class="fa fa-github" target="_blank"></a>
+                <div class="social"> <a href="https://github.com/mahmutalban" class="fa fa-github" target="_blank"></a>
                     <a href="https://www.linkedin.com/in/mahmutalban/?locale=sv_SE" class="fa fa-linkedin"
                         target="_blank"></a>
                 </div>
@@ -501,20 +550,20 @@
         </div>
     </div>
 </body>
-<script>
-    var acc = document.getElementsByClassName("accordion");
-    var i;
-    for (i = 0; i < acc.length; i++) {
-        acc[i].addEventListener("click", function () {
-            this.classList.toggle("active");
-            var panel = this.nextElementSibling;
-            if (panel.style.maxHeight) {
-                panel.style.maxHeight = null;
-            } else {
-                panel.style.maxHeight = panel.scrollHeight + "px";
-            }
-        });
-    }
-</script>
 
 </html>
+<script>
+    function openTabs(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+</script>
