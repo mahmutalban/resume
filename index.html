@@ -4,6 +4,7 @@
 <head>
     <title>Resume</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="stylesheet.css" type="text/css" charset="utf-8" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <style>
@@ -22,8 +23,16 @@
 
     @font-face {
         font-family: 'ubuntu';
-        src: url(https://github.com/mahmutalban/resume/blob/master/fonts/Ubuntu-Regular.ttf) format('truetype'),
-            url(https://github.com/mahmutalban/resume/blob/master/fonts/Ubuntu-Regular.ttf) format('ttf');
+        src: url('https://github.com/mahmutalban/resume/blob/master/fonts/Ubuntu-Regular.ttf') format('truetype'),
+            url('https://github.com/mahmutalban/resume/blob/master/fonts/ubuntu-regular-webfont.woff') format('woff');
+    }
+
+    @font-face {
+        font-family: 'ubuntu';
+        src: url('WebFont.eot');
+        src: url('WebFont.eot?#iefix') format('embedded-opentype'),
+            url('WebFont.woff') format('woff'),
+            url('WebFont.ttf') format('truetype'),
     }
 
     /*wrapper whole classes*/
@@ -141,6 +150,7 @@
         font-family: ubuntu;
         font-weight: 600;
     }
+
     /* Create an active/current tablink class */
     .tab button.active {
         color: grey;
@@ -327,10 +337,13 @@
                     och jag trivs i en roll med mycket ansvar, snabb inlärning och utvecklingsmöjligheter i en vardag
                     med utmanande uppgifter.</p>
             </div>
-            <div class="tab"> <button class="tablinks" onclick="openTabs(event, 'Erfarenhet')"><i class="fa fa-briefcase" aria-hidden="true"></i></button>
-                <button class="tablinks" onclick="openTabs(event, 'Utbildning')"><i class="fa fa-graduation-cap" aria-hidden="true"></i></button> <button
-                    class="tablinks" onclick="openTabs(event, 'Kompetens')"><i class="fa fa-cogs" aria-hidden="true"></i></button> <button class="tablinks"
-                    onclick="openTabs(event, 'Referenser')"><i class="fa fa-users" aria-hidden="true"></i></button>
+            <div class="tab"> <button class="tablinks" onclick="openTabs(event, 'Erfarenhet')"><i
+                        class="fa fa-briefcase" aria-hidden="true"></i></button>
+                <button class="tablinks" onclick="openTabs(event, 'Utbildning')"><i class="fa fa-graduation-cap"
+                        aria-hidden="true"></i></button> <button class="tablinks"
+                    onclick="openTabs(event, 'Kompetens')"><i class="fa fa-cogs" aria-hidden="true"></i></button>
+                <button class="tablinks" onclick="openTabs(event, 'Referenser')"><i class="fa fa-users"
+                        aria-hidden="true"></i></button>
             </div>
             <div id="Erfarenhet" class="tabcontent">
                 <div class="container">
