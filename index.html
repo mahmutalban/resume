@@ -70,7 +70,7 @@
 
     #phone,
     #mail {
-        text-decoration: none;
+        text-decoration: none !important;
         pointer-events: none;
     }
 
@@ -141,15 +141,9 @@
         font-family: ubuntu;
         font-weight: 600;
     }
-
-    /* Change background color of buttons on hover */
-    .tab button:hover {
-        background-color: #ddd;
-    }
-
     /* Create an active/current tablink class */
     .tab button.active {
-        background-color: #ccc;
+        color: grey;
     }
 
     /* Style the tab content */
@@ -333,15 +327,16 @@
                     och jag trivs i en roll med mycket ansvar, snabb inlärning och utvecklingsmöjligheter i en vardag
                     med utmanande uppgifter.</p>
             </div>
-            <div class="tab"> <button class="tablinks" onclick="openTabs(event, 'Erfarenhet')">Erfarenhet</button>
-                <button class="tablinks" onclick="openTabs(event, 'Utbildning')">Utbildning</button> <button
-                    class="tablinks" onclick="openTabs(event, 'Kompetens')">Kompetens</button> <button class="tablinks"
-                    onclick="openTabs(event, 'Referenser')">Referenser</button>
+            <div class="tab"> <button class="tablinks" onclick="openTabs(event, 'Erfarenhet')"><i class="fa fa-briefcase" aria-hidden="true"></i></button>
+                <button class="tablinks" onclick="openTabs(event, 'Utbildning')"><i class="fa fa-graduation-cap" aria-hidden="true"></i></button> <button
+                    class="tablinks" onclick="openTabs(event, 'Kompetens')"><i class="fa fa-cogs" aria-hidden="true"></i></button> <button class="tablinks"
+                    onclick="openTabs(event, 'Referenser')"><i class="fa fa-users" aria-hidden="true"></i></button>
             </div>
             <div id="Erfarenhet" class="tabcontent">
                 <div class="container">
                     <div class="position">
                         <div class="pos">
+                            <h3>ERFARENHET</h3>
                             <h4>Nov 2020 - Nu </h4>
                             <h4 id="pos-t1">Cabonline Group AB, Stockholm</h4>
                             <p><strong>Trafikledare: </strong><br>Vi når ut till tusentals människor dagligen och mina
@@ -392,6 +387,7 @@
                 <div class="container">
                     <div class="position">
                         <div class="pos">
+                            <h3>UTBILDNING</h3>
                             <h4>Aug 2020 - Feb 2022 </h4>
                             <h4 id="pos-t1">EC Utbildning, Göteborg</h4>
                             <p>Jag under utbildningen bland annat får utföra tester, buggsökning och felsökning, förstå
@@ -459,6 +455,7 @@
                 <div class="container">
                     <div class="position">
                         <div class="pos">
+                            <h3>REFERENSER</h3>
                             <h4>Alexander Abreu </h4>
                             <h4 id="pos-t1">Verisure Securitas Direct AB, Stockholm</h4>
                             <p><strong>Web Analyst: </strong><br>I had the opportunity to work with Mahmut Alban on
@@ -511,6 +508,7 @@
                 <div class="container">
                     <div class="position">
                         <div class="pos">
+                            <h3>KOMPETENSER</h3>
                             <h4>Mjuka Kompetenser</h4>
                             <ul>
                                 <li>Bra Kommunikatör</li>
